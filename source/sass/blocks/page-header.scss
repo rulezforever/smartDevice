@@ -5,6 +5,12 @@
   background-color: $black;
 }
 
-.page-header__logo {
+.page-header__logo-img {
+  width: 202px;
+  height: 52px;
 
+  @media (max-width: $mobile-width) {
+    width: 32px;
+    height: 32px;
+  }
 }
