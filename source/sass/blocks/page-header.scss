@@ -1,31 +1,10 @@
 .page-header {
   display: flex;
-  flex-direction: column;
-  gap: 244px;
-  padding: 0;
+  flex-wrap: wrap;
   margin: 0 auto;
-  margin-bottom: 243px;
-  position: relative;
-
-  @media (max-width: $tablet-width) {
-    gap: 84px;
-    margin-bottom: 85px;
-  }
-
-  @media (max-width: $mobile-width) {
-    gap: 71px;
-    margin-bottom: 70px;
-  }
+  background-color: $black;
 }
 
 .page-header__logo {
-  position: absolute;
-  top: 318px;
-  left: 280px;
 
-  @media (max-width: $tablet-width) {
-    position: static;
-    padding-top: 24px;
-    padding-left: 22px;
-  }
 }
