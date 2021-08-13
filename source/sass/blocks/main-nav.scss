@@ -6,7 +6,7 @@
   margin: 0 auto;
   padding-top: 30px;
   width: auto;
-  gap: 10vw;
+  // gap: 10vw;
   min-width: 73.5vw;
 
   @media (max-width: $tablet-width) {
@@ -35,6 +35,7 @@
 
 .main-nav__mail {
   position: relative;
+  margin-right: 3.8vw;
 
   &::before {
     content: "";
@@ -64,7 +65,7 @@
 
 .main-nav__phone {
   position: relative;
-  margin-left: 3.8vw;
+  // margin-left: 3.8vw;
 
   &::before {
     content: "";
