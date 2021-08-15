@@ -1,0 +1,144 @@
+.company {
+  color: $grey;
+}
+
+.company__list {
+  @include list-reset;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  width: 63%;
+  margin: 0 auto;
+  padding-top: 110px;
+  gap: 30px;
+  margin-bottom: 107px;
+
+  @media (max-width: $tablet-width) {
+    padding-top: 53px;
+    margin-bottom: 0;
+    width: 100%;
+  }
+}
+
+.company__item {
+  width: 29.8vw;
+  min-height: 15.5vw;
+  position: relative;
+  border: 1px solid $grey2;
+  border-left: 3px solid $blue;
+  padding: 42px 44px;
+  box-sizing: border-box;
+
+  @media (max-width: $tablet-width) {
+    width: 44.8vw;
+    padding: 21px 22px 23px;
+    min-height: 232px;
+  }
+
+
+  &:hover {
+    background-color: $blue;
+  }
+}
+
+.company__item:hover .company__item-header,
+.company__item:hover .company__item-text {
+  color: $white;
+}
+
+.company__item:hover .company__detective-icon {
+  fill: $white;
+}
+
+
+.company__item h3 {
+  @include font-set(24px, 140.6%, 400);
+  color: $blue;
+  padding: 0;
+  margin: 0;
+  margin-top: 16px;
+
+  @media (max-width: $tablet-width) {
+    margin-top: 4px;
+    width: 100%;
+    margin-bottom: 16px;
+  }
+}
+
+.company__item p {
+  @include font-set(16px, 134.4%, 400);
+  font-family: $secondary-font;
+  width: 25vw;
+
+  @media (max-width: $tablet-width) {
+    width: 38vw;
+    margin: 0;
+  }
+}
+
+.company__container {
+  width: 63%;
+  position: relative;
+}
+
+.company__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: -10px;
+  margin: 0 auto;
+  padding-left: 18vw;
+
+
+  @media (max-width: $tablet-width) {
+    padding-top: 60px;
+    padding-left: 0;
+  }
+}
+
+.company__image {
+  width: 209px;
+  height: 317px;
+}
+
+.company__title {
+  @include font-set(36px, 140.6%, 400);
+  margin: 0;
+  margin-bottom: 25px;
+
+  @media (max-width: $tablet-width) {
+    @include font-set(32px, 140.6%, 400);
+  }
+}
+
+.company__slogan {
+  @include font-set(16px, 134.4%, 400);
+  font-family: $secondary-font;
+  width: 51vw;
+  margin: 0;
+  margin-bottom: 54px;
+
+  @media (max-width: $tablet-width) {
+    width: 68vw;
+    height: 190px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+.company__button {
+  @include font-set(14px, 16px, 700);
+  letter-spacing: 1px;
+  color: $blue;
+  margin: 0;
+  width: 180px;
+  padding: 17px 45px;
+  box-sizing: border-box;
+  border: 1px solid $blue;
+  border-radius: 5px;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.7;
+  }
+}

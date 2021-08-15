@@ -2,8 +2,11 @@
   display: flex;
   flex-wrap: wrap;
   margin: 0 auto;
-  background-color: $black;
   margin-bottom: 270px;
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 117px;
+  }
 }
 
 .page-header__logo-img {
