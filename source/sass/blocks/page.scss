@@ -41,12 +41,12 @@
     }
 
     @media (max-width: $mobile-width) {
-      // background-image: url("../img/bicycle-mobile@1x.jpg");
+      background-image: url("../img/backpromo-mobile@1x.png");
       width: 100%;
-      height: 390px;
+      height: 647px;
 
       @media (min-resolution: 2dppx) {
-        // background-image: url("../img/bicycle-mobile@2x.jpg");
+        background-image: url("../img/backpromo-mobile@2x.png");
       }
     }
   }

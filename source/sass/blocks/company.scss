@@ -19,6 +19,10 @@
     margin-bottom: 0;
     width: 100%;
   }
+
+  @media (max-width: $mobile-width) {
+    gap: 20px;
+  }
 }
 
 .company__item {
@@ -32,13 +36,65 @@
 
   @media (max-width: $tablet-width) {
     width: 44.8vw;
-    padding: 21px 22px 23px;
-    min-height: 232px;
+    padding: 21px 22px 0;
+    // min-height: 306px;
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 92vw;
+    padding-top: 27px;
+    padding-left: 24px;
+    padding-right: 11px;
+    min-height: 310px;
   }
 
 
   &:hover {
     background-color: $blue;
+  }
+}
+
+.company__list li:nth-of-type(1) {
+  @media (max-width: $tablet-width) {
+    min-height: 306px;
+  }
+
+  @media (max-width: $mobile-width) {
+    min-height: 310px;
+    padding-right: 19px;
+  }
+}
+
+.company__list li:nth-of-type(2) {
+  @media (max-width: $tablet-width) {
+    min-height: 306px;
+  }
+
+  @media (max-width: $mobile-width) {
+    min-height: 310px;
+  }
+}
+
+.company__list li:nth-of-type(3) {
+  @media (max-width: $tablet-width) {
+    min-height: 232px;
+  }
+
+  @media (max-width: $mobile-width) {
+    min-height: 232px;
+  }
+}
+
+.company__list li:nth-of-type(4) {
+  @media (max-width: $mobile-width) {
+    min-height: 244px;
+    padding-right: 21px;
+  }
+}
+
+.company__item .company__item-text:nth-of-type(1) {
+  @media (max-width: $mobile-width) {
+    padding-right: 20px;
   }
 }
 
@@ -64,6 +120,11 @@
     width: 100%;
     margin-bottom: 16px;
   }
+
+  @media (max-width: $mobile-width) {
+    @include font-set(20px, 140.6%, 400);
+    margin-bottom: 12px;
+  }
 }
 
 .company__item p {
@@ -75,11 +136,26 @@
     width: 38vw;
     margin: 0;
   }
+
+  @media (max-width: $mobile-width) {
+    width: 100%;
+    margin: 0;
+  }
 }
 
 .company__container {
   width: 63%;
   position: relative;
+  padding-left: 50px;
+
+  @media (max-width: $tablet-width) {
+    padding-left: 36px;
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 100%;
+    padding-left: 15px;
+  }
 }
 
 .company__wrapper {
@@ -97,8 +173,17 @@
 }
 
 .company__image {
-  width: 209px;
+  width: 157px;
   height: 317px;
+
+  @media (max-width: $tablet-width) {
+    width: 175px;
+    height: 361px;
+  }
+
+  @media (max-width: $mobile-width) {
+    display: none;
+  }
 }
 
 .company__title {
@@ -108,6 +193,10 @@
 
   @media (max-width: $tablet-width) {
     @include font-set(32px, 140.6%, 400);
+  }
+
+  @media (max-width: $mobile-width) {
+    @include font-set(28px, 140.6%, 400);
   }
 }
 
@@ -124,7 +213,27 @@
     overflow: hidden;
     text-overflow: ellipsis;
   }
+
+  @media (max-width: $mobile-width) {
+    width: 95%;
+    height: 328px;
+  }
 }
+
+.company__slogan span {
+  display: block;
+  box-sizing: border-box;
+  padding-top: 20px;
+
+  @media (max-width: $tablet-width) {
+    padding-top: 23px;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding-top: 40px;
+  }
+}
+
 
 .company__button {
   @include font-set(14px, 16px, 700);
@@ -132,7 +241,7 @@
   color: $blue;
   margin: 0;
   width: 180px;
-  padding: 17px 45px;
+  padding: 17px 50px;
   box-sizing: border-box;
   border: 1px solid $blue;
   border-radius: 5px;
@@ -140,5 +249,9 @@
 
   &:hover {
     opacity: 0.7;
+  }
+
+  @media (max-width: $tablet-width) {
+    padding: 13px 50px;
   }
 }
