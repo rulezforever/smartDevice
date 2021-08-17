@@ -1,3 +1,238 @@
 .questions {
   background-color: $blue;
+  color: $white;
+}
+
+.questions__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  gap: 4.4vw;
+  padding-top: 92px;
+  padding-bottom: 75px;
+
+  @media (max-width: $tablet-width) {
+    gap: 0;
+    padding-top: 80px;
+    padding-bottom: 65px;
+    width: 97vw;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding-top: 28px;
+    padding-bottom: 7px;
+  }
+}
+
+.questions__container {
+  @media (max-width: $tablet-width) {
+    width: 81vw;
+    padding-left: 8vw;
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 100vw;
+    padding-left: 4vw;
+  }
+}
+
+.questions fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.questions__contacts,
+.questions__send {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0;
+  margin-bottom: 40px;
+
+  @media (max-width: $tablet-width) {
+    width: 95%;
+    margin-bottom: 42px;
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 100%;
+    flex-direction: column;
+    gap: 35px;
+    margin-bottom: 31px;
+  }
+}
+
+.questions__send {
+  @media (max-width: $mobile-width) {
+    gap: 23px;
+  }
+}
+
+.questions__title {
+  @include font-set(36px, 140.6%, 400);
+  margin: 0;
+  margin-bottom: 12px;
+
+  @media (max-width: $tablet-width) {
+    @include font-set(32px, 45px, 400);
+    margin-bottom: 16px;
+  }
+
+  @media (max-width: $mobile-width) {
+    @include font-set(28px, 40px, 400);
+  }
+}
+
+.questions__slogan {
+  @include font-set(16px, 134.4%, 400);
+  font-family: $secondary-font;
+  margin: 0;
+  padding-left: 5px;
+  margin-bottom: 48px;
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 56px;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 23px;
+  }
+}
+
+.questions__input,
+.questions__text {
+  background-color: $white-opacity;
+  border: none;
+}
+
+.questions__input {
+  width: 270px;
+  height: 50px;
+  box-sizing: border-box;
+  outline: none;
+  color: $white;
+  text-indent: 17px;
+
+  @media (max-width: $tablet-width) {
+    width: 36.5vw;
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 92vw;
+  }
+
+  &::placeholder {
+    @include font-set(16px, 134.4%, 400);
+    font-family: $secondary-font;
+    color: $white;
+  }
+}
+
+.questions__text {
+  width: 570px;
+  height: 154px;
+  margin-bottom: 38px;
+  outline: none;
+  text-indent: 17px;
+  padding-top: 12px;
+  color: $white;
+  box-sizing: border-box;
+
+
+  &::placeholder {
+    @include font-set(16px, 134.4%, 400);
+    font-family: $secondary-font;
+    color: $white;
+  }
+
+  @media (max-width: $tablet-width) {
+    width: 76.8vw;
+    height: 159px;
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 92vw;
+    height: 104px;
+    margin-bottom: 26px;
+  }
+}
+
+.questions__button {
+  width: 270px;
+  cursor: pointer;
+  letter-spacing: 1px;
+  padding: 14px 0;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  @media (max-width: $tablet-width) {
+    width: 36.5vw;
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 92vw;
+  }
+}
+
+.questions__check-label {
+  @include font-set(14px, auto, 400);
+  font-family: $secondary-font;
+  position: relative;
+  cursor: pointer;
+  width: 12vw;
+  padding-top: 8px;
+  padding-left: 35px;
+
+  @media (max-width: $tablet-width) {
+    width: 31vw;
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 70vw;
+  }
+}
+
+.questions__check:checked + label::before,
+.questions__check + label::before {
+  content: "";
+  position: absolute;
+  left: 3px;
+  top: 10px;
+  width: 16px;
+  height: 16px;
+  border: 1px solid $white;
+  box-sizing: border-box;
+}
+
+.questions__check:checked + label::after {
+  content: "";
+  position: absolute;
+  left: 7px;
+  top: 14px;
+  width: 8px;
+  height: 4px;
+  border-left: 1px solid $white;
+  border-bottom: 1px solid $white;
+  box-sizing: border-box;
+  transform: rotate(-45deg);
+}
+
+.questions__item {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.questions__image {
+  margin-top: 3.6vw;
+  transform: translateX(-25px);
+  width: 26.6vw;
+
+  @media (max-width: $tablet-width) {
+    display: none;
+  }
 }

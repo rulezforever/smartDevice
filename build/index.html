@@ -206,7 +206,31 @@
             <img src="/img/airplane@1x.png" srcset="/img/airplane@2x.png 2x" width="511" height="288"
               class="questions__image" alt="Бумажный самолетик">
           </picture>
-
+          <div class="questions__container">
+            <h2 class="questions__title">Остались вопросы? Задайте их нам!</h2>
+            <p class="questions__slogan">Мы проконсультируем Вас бесплатно</p>
+            <form class="questions__form" id="questions" method="post" action="https://echo.htmlacademy.ru">
+              <fieldset>
+                <p class="questions__contacts">
+                  <label class="questions__input-label" for="name">
+                    <input class="questions__input" id="name" type="text" name="name" placeholder="Имя"
+                      required></label>
+                  <label class="questions__input-label" for="phone">
+                    <input class="questions__input" id="phone" type="tel" name="phone" placeholder="Телефон" required>
+                  </label>
+                </p>
+                <p class="questions__item">
+                  <label class="visually-hidden" for="question">Вопрос:</label>
+                  <textarea class="questions__text" id="question" name="question" placeholder="Ваш вопрос"></textarea>
+                </p>
+                <p class="questions__send">
+                  <button class="questions__button button" type="submit">Задать вопрос</button>
+                  <input class="questions__check visually-hidden" type="checkbox" name="personal" id="personal" checked>
+                  <label class="questions__check-label" for="personal">Я согласен на обработку  персональных данных</label>
+                </p>
+              </fieldset>
+            </form>
+          </div>
         </div>
 
       </section>

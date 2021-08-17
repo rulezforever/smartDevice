@@ -1,22 +1,15 @@
 .service {
   background-color: $grey2;
-  // padding-top: 88px;
-  // padding-bottom: 125px;
-
-  // @media (max-width: $tablet-width) {
-  //   padding-top: 52px;
-  // }
 }
 
 .service__wrapper {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  width: 61%;
   gap: 50px;
   margin: 0 auto;
   padding-top: 88px;
-  padding-bottom: 125px;
+  padding-bottom: 129px;
 
   @media (max-width: $tablet-width) {
     width: 94%;
@@ -26,6 +19,7 @@
   }
 
   @media (max-width: $mobile-width) {
+    padding-bottom: 60px;
     width: 90%;
     gap: 40px;
   }
@@ -63,6 +57,12 @@
     left: 45px;
     width: 20vw;
   }
+
+  @media (max-width: $mobile-width) {
+    top: 22px;
+    left: 30px;
+    width: 50vw;
+  }
 }
 
 .service__item {
@@ -89,9 +89,15 @@
     border-right: 1px solid $white;
     transform: rotate(-45deg);
   }
+
+  &:hover {
+    opacity: 0.7;
+  }
 }
 
 .service__image {
+  width: 19.2vw;
+
   @media (max-width: $tablet-width) {
     width: 720px;
     height: 256px;
@@ -103,17 +109,19 @@
   font-family: $primary-font;
   color: $white;
   margin: 0;
+  width: 65vw;
+  padding-left: 19.5vw;
 
   @media (max-width: $tablet-width) {
     @include font-set(32px, 140.6%, 400);
     width: 87%;
     min-height: 88px;
+    padding-left: 0;
   }
 
   @media (max-width: $mobile-width) {
     @include font-set(28px, 140.6%, 400);
     width: 100%;
     padding-left: 2.5vw;
-    // min-height: 88px;
   }
 }
