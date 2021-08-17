@@ -130,29 +130,84 @@
         </div>
       </section>
       <section class="service wrapper">
-        <ul class="service__list">
-          <li class="service__item"><a href="#">
-            <picture>
-              <img src="/img/manufactor-desktop@1x.png" srcset="/img/manufactor-desktop@2x.png 2x" alt="Производство">
-            </picture>
-                <p>Производсиво печатных плат</p>
+        <div class="service__wrapper">
+          <h2 class="service__title">Service Device предлагает следующие товары и услуги</h2>
+          <ul class="service__list">
+            <li class="service__item"><a href="#">
+                <picture>
+                  <source media="(max-width: 767px)" type="image/webp"
+                    srcset="img/manufactor-mobile@1x.webp 1x, img/manufactor-mobile@2x.webp 2x">
+                  <!-- retina: 103kB; non-retina: 36kB  -->
+                  <source media="(max-width: 767px)" type="image/png"
+                    srcset="img/manufactor-mobile@1x.png 1x, img/manufactor-mobile@2x.png 2x">
+                  <source media="(max-width: 1023px)" type="image/webp"
+                    srcset="img/manufactor-tablet@1x.webp 1x, img/manufactor-tablet@2x.webp 2x">
+                  <!-- retina: 183kB; non-retina: 69kB  -->
+                  <source media="(max-width: 1023px)" type="image/png"
+                    srcset="img/manufactor-tablet@1x.png 1x, img/manufactor-tablet@2x.png 2x">
+                  <source type="image/webp"
+                    srcset="img/manufactor-desktop@1x.webp 1x, img/manufactor-desktop@2x.webp 2x">
+                  <!-- retina: 193kB; non-retina: 82kB  -->
+                  <img src="/img/manufactor-desktop@1x.png" srcset="/img/manufactor-desktop@2x.png 2x" width="370"
+                    height="620" class="service__image" alt="Производство">
+                </picture>
+                <p>Производство печатных плат</p>
 
-            </a>
-          </li>
-          <li class="service__item"><a href="#">
-            <div>
-              <p>Монтаж печатных плат</p>
-            </div>
-          </a>
-        </li>
-        <li class="service__item"><a href="#">
-          <div>
-            <p>Комплектующие для светотехники</p>
-          </div>
-        </a>
-      </li>
+              </a>
+            </li>
+            <li class="service__item"><a href="#">
+                <picture>
+                  <source media="(max-width: 767px)" type="image/webp"
+                    srcset="img/assembly-mobile@1x.webp 1x, img/assembly-mobile@2x.webp 2x">
+                  <!-- retina: 103kB; non-retina: 36kB  -->
+                  <source media="(max-width: 767px)" type="image/png"
+                    srcset="img/assembly-mobile@1x.png 1x, img/assembly-mobile@2x.png 2x">
+                  <source media="(max-width: 1023px)" type="image/webp"
+                    srcset="img/assembly-tablet@1x.webp 1x, img/assembly-tablet@2x.webp 2x">
+                  <!-- retina: 183kB; non-retina: 69kB  -->
+                  <source media="(max-width: 1023px)" type="image/png"
+                    srcset="img/assembly-tablet@1x.png 1x, img/assembly-tablet@2x.png 2x">
+                  <source type="image/webp" srcset="img/assembly-desktop@1x.webp 1x, img/assembly-desktop@2x.webp 2x">
+                  <!-- retina: 193kB; non-retina: 82kB  -->
+                  <img src="/img/assembly-desktop@1x.png" srcset="/img/assembly-desktop@2x.png 2x" width="370"
+                    height="620" class="service__image" alt="Монтаж">
+                </picture>
+                <p>Монтаж печатных плат</p>
+              </a>
+            </li>
+            <li class="service__item"><a href="#">
+                <picture>
+                  <source media="(max-width: 767px)" type="image/webp"
+                    srcset="img/light-mobile@1x.webp 1x, img/light-mobile@2x.webp 2x">
+                  <!-- retina: 103kB; non-retina: 36kB  -->
+                  <source media="(max-width: 767px)" type="image/png"
+                    srcset="img/light-mobile@1x.png 1x, img/light-mobile@2x.png 2x">
+                  <source media="(max-width: 1023px)" type="image/webp"
+                    srcset="img/light-tablet@1x.webp 1x, img/light-tablet@2x.webp 2x">
+                  <!-- retina: 183kB; non-retina: 69kB  -->
+                  <source media="(max-width: 1023px)" type="image/png"
+                    srcset="img/light-tablet@1x.png 1x, img/light-tablet@2x.png 2x">
+                  <source type="image/webp" srcset="img/light-desktop@1x.webp 1x, img/light-desktop@2x.webp 2x">
+                  <!-- retina: 193kB; non-retina: 82kB  -->
+                  <img src="/img/light-desktop@1x.png" srcset="/img/light-desktop@2x.png 2x" width="370" height="620"
+                    class="service__image" alt="Комплектующие для светотехники">
+                </picture>
+                <p>Комплектующие для светотехники</p>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="questions wrapper">
+        <div class="questions__wrapper">
+          <picture>
+            <source type="image/webp" srcset="img/airplane@1x.webp 1x, img/airplane@2x.webp 2x">
+            <!-- retina: 185kB; non-retina: 58kB  -->
+            <img src="/img/airplane@1x.png" srcset="/img/airplane@2x.png 2x" width="511" height="288"
+              class="questions__image" alt="Бумажный самолетик">
+          </picture>
 
-        </ul>
+        </div>
 
       </section>
     </main>

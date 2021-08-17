@@ -1,5 +1,14 @@
 .company {
   color: $grey;
+  margin-bottom: 95px;
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 66px;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 79px;
+  }
 }
 
 .company__list {
