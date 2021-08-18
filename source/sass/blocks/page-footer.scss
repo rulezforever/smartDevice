@@ -1,6 +1,5 @@
 .page-footer {
   flex: 0 0 auto;
-  background-color: blue;
   width: 100%;
 }
 
@@ -8,4 +7,138 @@
   display: flex;
   flex-direction: column;
   min-height: 100%;
+}
+
+.page-footer__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  // width: 77vw;
+  margin: 0 auto;
+  margin-bottom: 62px;
+  justify-content: center;
+}
+
+.page-footer__logo {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 22vw;
+}
+
+.page-footer__site {
+  // padding-top: 45px;
+  width: 33.3vw;
+  box-sizing: border-box;
+  // max-height: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.page-footer__office {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  padding-top: 45px;
+}
+
+.page-footer__copyright-list {
+  @include list-reset;
+  display: flex;
+  flex-wrap: wrap;
+  // width:77vw;
+  margin: 0 auto;
+}
+
+.page-footer__copyright-item {
+  @include font-set(13px, 24px, 400);
+  letter-spacing: 0.04em;
+  color: $dark;
+  text-transform: uppercase;
+  opacity: 0.5;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+
+  &:nth-of-type(1) {
+
+    margin-right: 2.5vw;
+  }
+
+  &:nth-of-type(2) {
+    margin-right: 6vw;
+  }
+
+  &:nth-of-type(3) {
+    margin-right: 18vw;
+  }
+}
+
+.page-footer__copyright {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  border-top: 1px solid $grey3;
+}
+
+.page-footer__logo-img {
+  padding-left: 2.5vw;
+  padding-top: 1.5vw;
+}
+
+.page-footer__social-list {
+  @include list-reset;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding-top: 2.8vw;
+  padding-left: 2.4vw;
+}
+
+.page-footer__years {
+  @include font-set(13px, 24px, 400);
+  letter-spacing: 4%;
+  color: $dark;
+  text-transform: uppercase;
+  opacity: 0.5;
+  display: none;
+
+  @media (max-width: $tablet-width) {
+    display: block;
+  }
+}
+
+.page-footer__text {
+  @include font-set(15px, 16px, 400);
+  text-transform: uppercase;
+  color: $dark;
+  letter-spacing: 5%;
+}
+
+.page-footer__text-list {
+  @include list-reset;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  height: 124px;
+  width: 26vw;
+}
+
+.page-footer__office-list {
+  @include list-reset;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.page-footer__text-item,
+.page-footer__copyright-item {
+  @include font-set(15px, 25px, 400);
+  font-family: $secondary-font;
+  color: $dark;
+  opacity: 0.5;
+}
+
+.page-footer__text-item a {
+  color: $dark;
 }
