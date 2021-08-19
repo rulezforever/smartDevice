@@ -3,6 +3,7 @@
   display: flex;
   flex-wrap: nowrap;
   gap: 2vw;
+  position: relative;
 
   @media (max-width: $tablet-width) {
     margin-bottom: 81px;
@@ -15,8 +16,26 @@
     min-height: 425px;
     display: flex;
     justify-content: center;
-    position: relative;
   }
+
+  // &::before {
+  //   content: "";
+  //   position: absolute;
+  //   width: 1920px;
+  //   height: 950px;
+  //   background-image: url("../../img/triangle-desktop@1x.png");
+  //   background-repeat: no-repeat;
+  //   top: -259px;
+  //   left: 0;
+  //   z-index: -1;
+  //   background-color: transparent;
+
+  //   @media (max-width: $tablet-width) {
+  //     background-image: url("../../img/triangle-mobile@1x.png");
+  //     top: -112px;
+  //     left: 0;
+  //   }
+  // }
 }
 
 .promo__header {
@@ -131,6 +150,41 @@
   @media (max-width: $mobile-width) {
     width: 287px;
     margin: 0 auto;
+    display: none;
+  }
+}
+
+.promo__button-mobile {
+  @include font-set(16px, auto, 700);
+  text-transform: uppercase;
+  letter-spacing: 5%;
+  color: $white;
+  background-color: $blue;
+  padding: 18px 58px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  margin-left: 97px;
+  width: 407px;
+  margin-bottom: 155px;
+  transform: translateY(-32px);
+  display: none;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  @media (max-width: $tablet-width) {
+    margin-left: 51px;
+    width: 379px;
+    padding: 19px 28px;
+    letter-spacing: 1px;
+    margin-bottom: 0;
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 287px;
+    margin: 0 auto;
+    display: block;
   }
 }
 

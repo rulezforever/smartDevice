@@ -1,59 +1,124 @@
 (function () {
 
-  var navMain = document.querySelector('.main-nav');
-  var navToggle = document.querySelector('.main-nav__toggle');
-  var pageContainer = document.querySelector('.page-container');
-  var pageBody = document.querySelector('.page-body');
+  const SYMBOLS_PATTERN = /\+7\(\d{3}\)\d{3}-\d{2}-\d{2}/;
 
-  navMain.classList.remove('main-nav--nojs');
-  navMain.classList.remove('main-nav--opened');
-  pageContainer.classList.remove('page-container--menu-opened');
-  pageContainer.classList.remove('page-container--nojs');
+  const  callButton = document.querySelector('.main-nav__button');
+  const modalClose = document.querySelector('.modal__close');
+  const  modal = document.querySelector('.modal');
+  const nameInput = document.querySelector('.modal__input--name');
+  const phoneInput = document.querySelector('.modal__input--phone');
 
-  navToggle.addEventListener('click', function () {
-    navMain.classList.toggle('main-nav--opened');
-    pageContainer.classList.toggle('page-container--menu-opened');
-    pageContainer.classList.toggle('page-container--nojs');
-    if (navMain.classList.contains('main-nav--opened')) {
-      pageBody.style.overflow = "hidden";
-    } else {
-      pageBody.style.overflow = "auto";
+
+  const isStorageSupport = true;
+  const storageName = "";
+  const storagePhone = "";
+  const storageQuestion = "";
+
+  try {
+    storage = localStorage.getItem("your_name");
+  } catch (err) {
+    isStorageSupport = false;
+  }
+
+  try {
+    storage = localStorage.getItem("your_phone");
+  } catch (err) {
+    isStorageSupport = false;
+  }
+
+  try {
+    storage = localStorage.getItem("your_question");
+  } catch (err) {
+    isStorageSupport = false;
+  }
+
+  callButton.addEventListener('click', function () {
+    modal.classList.add('modal--opened');
+    nameInput.focus();
+  });
+
+  const modalCloseHandler =(evt) => {
+    evt.preventDefault();
+    modal.classList.remove("modal--opened");
+  }
+
+  modalClose.addEventListener('click', modalCloseHandler);
+
+  window.addEventListener("keydown", function (evt) {
+    if (evt.keyCode === 27) {
+      if (modal.classList.contains("modal--opened")) {
+        evt.preventDefault();
+        modal.classList.remove("modal--opened");
+      }
     }
   });
 
-  // slow scroll for links
+//  slow scroll for links
+const scroll = document.querySelector('.promo__scroll');
+const promo = document.querySelector('.promo__button');
 
-  const anchors = document.querySelectorAll('.main-nav__list a[href*="#"]');
+scroll.addEventListener('click', function (evt){
+  evt.preventDefault();
 
-  for (let anchor of anchors) {
-    anchor.addEventListener('click', function (e) {
-      e.preventDefault();
+  const benefits = scroll.getAttribute('href').substr(1);
+  document.getElementById(benefits).scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+});
 
-      const blockID = anchor.getAttribute('href').substr(1);
+promo.addEventListener('click', function (evt){
+  evt.preventDefault();
 
-      document.getElementById(blockID).scrollIntoView({
-        behavior: 'smooth',
-        block: 'start'
-      });
-    });
-  }
+  const form = promo.getAttribute('href').substr(1);
+  document.getElementById(form).scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+});
 
+  // //--- input validation
 
-  //--- input validation
+  // const inputElement = document.querySelector('.promo__input--phone');
+  // const symbolsPattern = /(?:\(?\+\d{2}\)?\s*)?\d+(?:[ -]*\d+)*$/;
 
-  const inputElement = document.querySelector('.promo__input--phone');
-  const symbolsPattern = /(?:\(?\+\d{2}\)?\s*)?\d+(?:[ -]*\d+)*$/;
+  // const checkValidation = () => {
+  //   const value = inputElement.value
+  //   if (!symbolsPattern.test(value)) {
+  //     inputElement.setCustomValidity('Нельзя вводить буквы - введите числа!');
+  //   } else {
+  //     inputElement.setCustomValidity('');
+  //   }
+  //   inputElement.reportValidity();
+  // }
 
-  const checkValidation = () => {
-    const value = inputElement.value
-    if (!symbolsPattern.test(value)) {
-      inputElement.setCustomValidity('Нельзя вводить буквы - введите числа!');
-    } else {
-      inputElement.setCustomValidity('');
-    }
-    inputElement.reportValidity();
-  }
+  // inputElement.addEventListener('input', checkValidation);
+  // const onDocumentEscPress = (evt) => {
+  //   onPressedKey(evt,ESCAPE,onCloseBtnClick);
+  // }
 
-  inputElement.addEventListener('input', checkValidation);
+  // // const onCloseBtnClick = () => {
+  // //   hideElement(bigPictureElement);
+  // //   closeBtnElement.removeEventListener('click', onCloseBtnClick);
+  // //   bodyElement.classList.remove('modal-open');
+  // //   document.removeEventListener('keydown',onDocumentEscPress);
+  // // }
 
+  // // const onPressedKey = (evt,code,callback) => {
+  // //   if (evt.key === code) {
+  // //     evt.preventDefault();
+  // //     callback();
+  // //   }
+
+  // const onMessageCloseByEmptyClick = (evt) => {
+  //   if (evt.target === document.querySelector('.modal')) {
+  //     return
+  //     // onSuccessBtnClick();
+  //   } else {
+
+  //   }
+  //   if (evt.target === document.querySelector('.error')) {
+  //     onErrorBtnClick();
+  //   }
+  // }
 })();

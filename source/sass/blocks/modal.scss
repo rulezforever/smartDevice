@@ -1,0 +1,178 @@
+.modal {
+  position: fixed;
+  top: 137px;
+  right: -16px;
+  // bottom: 0;
+  left: 0;
+  margin: auto;
+  background-color: $blue;
+  color: $white;
+  width: 490px;
+  height: 605px;
+  box-sizing: border-box;
+  display: none;
+
+  &--opened {
+    display: block;
+  }
+}
+
+.modal__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  // justify-content: center;
+  width: 100%;
+  // gap: 4.4vw;
+  padding: 29px 40px;
+  box-sizing: border-box;
+}
+
+.modal fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.modal__title {
+  @include font-set(28px, 40px, 400);
+  margin: 0;
+  margin-bottom: 12px;
+}
+
+.modal__slogan {
+  @include font-set(16px, 22px, 400);
+  font-family: $secondary-font;
+  margin: 0;
+  width: 97%;
+  margin-bottom: 33px;
+}
+
+.modal__contacts {
+  gap: 30px;
+  margin: 0;
+}
+
+.modal__send {
+  gap: 24px;
+}
+
+.modal__contacts,
+.modal__send {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.modal__input,
+.modal__text {
+  background-color: $white-opacity;
+  border: none;
+}
+
+.modal__input {
+  width: 412px;
+  height: 52px;
+  box-sizing: border-box;
+  outline: none;
+  color: $white;
+  text-indent: 17px;
+
+  &::placeholder {
+    @include font-set(16px, 22px, 400);
+    font-family: $secondary-font;
+    color: $white;
+  }
+}
+
+.modal__text {
+  width: 412px;
+  height: 104px;
+  margin-bottom: 16px;
+  outline: none;
+  text-indent: 17px;
+  padding-top: 12px;
+  color: $white;
+  box-sizing: border-box;
+
+
+  &::placeholder {
+    @include font-set(16px, 22px, 400);
+    font-family: $secondary-font;
+    color: $white;
+  }
+}
+
+.modal__button {
+  width: 412px;
+  cursor: pointer;
+  letter-spacing: 1px;
+  padding: 14px 0;
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+.modal__check-label {
+  @include font-set(14px, 15px, 400);
+  font-family: $secondary-font;
+  position: relative;
+  cursor: pointer;
+  width: 18vw;
+  padding-top: 8px;
+  padding-left: 49px;
+}
+
+.modal__check:checked + label::before,
+.modal__check + label::before {
+  content: "";
+  position: absolute;
+  left: 3px;
+  top: 10px;
+  width: 16px;
+  height: 16px;
+  border: 1px solid $white;
+  box-sizing: border-box;
+}
+
+.modal__check:checked + label::after {
+  content: "";
+  position: absolute;
+  left: 7px;
+  top: 14px;
+  width: 8px;
+  height: 4px;
+  border-left: 1px solid $white;
+  border-bottom: 1px solid $white;
+  box-sizing: border-box;
+  transform: rotate(-45deg);
+}
+
+.modal__close {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  top: 8px;
+  right: 0;
+  cursor: pointer;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 30px;
+    right: 20px;
+    width: 22px;
+    height: 1px;
+    background-color: $white;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
