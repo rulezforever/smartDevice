@@ -5,10 +5,20 @@
 .page-body {
   margin: 0 auto;
   height: 100%;
+  position: relative;
 }
 
 .page-main {
   flex: 1 0 auto;
+}
+
+.page-body__overlay {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
 }
 
 .page-container {

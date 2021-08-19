@@ -14,7 +14,7 @@
   flex-wrap: wrap;
   // width: 77vw;
   margin: 0 auto;
-  margin-bottom: 62px;
+  margin-bottom: 34px;
   justify-content: center;
 }
 
@@ -22,36 +22,42 @@
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  width: 22vw;
+  // align-items: center;
+  padding-right: 11vw;
 }
 
 .page-footer__site {
-  // padding-top: 45px;
-  width: 33.3vw;
+  padding-right: 8vw;
+  // width: 33.3vw;
   box-sizing: border-box;
   // max-height: 50px;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
+  gap: 10px;
 }
 
 .page-footer__office {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  padding-top: 45px;
+  gap: 10px;
 }
 
 .page-footer__copyright-list {
   @include list-reset;
   display: flex;
   flex-wrap: wrap;
-  // width:77vw;
-  margin: 0 auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  // justify-content: center;
+  // padding-left: 252px;
+  // margin: 0 auto;
 }
 
 .page-footer__copyright-item {
-  @include font-set(13px, 24px, 400);
+  @include font-set (13px,14px, 400);
+  font-family: $secondary-font;
   letter-spacing: 0.04em;
   color: $dark;
   text-transform: uppercase;
@@ -61,16 +67,15 @@
   align-items: center;
 
   &:nth-of-type(1) {
-
-    margin-right: 2.5vw;
+    margin-right: 3.9vw;
   }
 
   &:nth-of-type(2) {
-    margin-right: 6vw;
+    margin-right: 7.4vw;
   }
 
   &:nth-of-type(3) {
-    margin-right: 18vw;
+    margin-right: 21.1vw;
   }
 }
 
@@ -79,11 +84,12 @@
   flex-wrap: wrap;
   margin: 0 auto;
   border-top: 1px solid $grey3;
+  justify-content: center;
 }
 
 .page-footer__logo-img {
-  padding-left: 2.5vw;
-  padding-top: 1.5vw;
+  padding-left: 12px;
+  padding-top: 60px;
 }
 
 .page-footer__social-list {
@@ -91,8 +97,8 @@
   display: flex;
   flex-wrap: wrap;
   gap: 16px;
-  padding-top: 2.8vw;
-  padding-left: 2.4vw;
+  padding-top: 48px;
+  padding-left: 13px;
 }
 
 .page-footer__years {
@@ -112,7 +118,8 @@
   @include font-set(15px, 16px, 400);
   text-transform: uppercase;
   color: $dark;
-  letter-spacing: 5%;
+  letter-spacing: 0.5px;
+  padding-top: 44px;
 }
 
 .page-footer__text-list {
@@ -122,6 +129,7 @@
   flex-direction: column;
   height: 124px;
   width: 26vw;
+  padding-left: 0;
 }
 
 .page-footer__office-list {
@@ -131,8 +139,7 @@
   flex-direction: column;
 }
 
-.page-footer__text-item,
-.page-footer__copyright-item {
+.page-footer__text-item {
   @include font-set(15px, 25px, 400);
   font-family: $secondary-font;
   color: $dark;

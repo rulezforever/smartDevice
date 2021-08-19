@@ -176,3 +176,11 @@
     transform: rotate(-45deg);
   }
 }
+
+.modal-show .modal {
+  display: block;
+}
+
+.modal-show .page-body__overlay {
+  display: block;
+}

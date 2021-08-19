@@ -77,48 +77,67 @@ promo.addEventListener('click', function (evt){
         });
 });
 
-  // //--- input validation
+// document.querySelector('button#open').addEventListener('click', e => {
+//   document.body.classList.add('modal-show')
+// })
 
-  // const inputElement = document.querySelector('.promo__input--phone');
-  // const symbolsPattern = /(?:\(?\+\d{2}\)?\s*)?\d+(?:[ -]*\d+)*$/;
+// document.querySelector('button#close').addEventListener('click', e => {
+//   document.body.classList.remove('modal-show')
+// })
 
-  // const checkValidation = () => {
-  //   const value = inputElement.value
-  //   if (!symbolsPattern.test(value)) {
-  //     inputElement.setCustomValidity('Нельзя вводить буквы - введите числа!');
-  //   } else {
-  //     inputElement.setCustomValidity('');
-  //   }
-  //   inputElement.reportValidity();
-  // }
+// document.querySelector('.page-body__overlay').addEventListener('click', e => {
+//   document.body.classList.remove('modal-show')
+// })
 
-  // inputElement.addEventListener('input', checkValidation);
-  // const onDocumentEscPress = (evt) => {
-  //   onPressedKey(evt,ESCAPE,onCloseBtnClick);
-  // }
+// document.addEventListener(
+//   "click",
+//   function(event) {
+//     // If user either clicks X button OR clicks outside the modal window, then close modal by calling closeModal()
+//     if (
+//       event.target.matches(".modal__close") ||
+//       !event.target.closest(".modal")
+//     ) {
+//       closeModal()
+//     }
+//   },
+//   false
+// )
 
-  // // const onCloseBtnClick = () => {
-  // //   hideElement(bigPictureElement);
-  // //   closeBtnElement.removeEventListener('click', onCloseBtnClick);
-  // //   bodyElement.classList.remove('modal-open');
-  // //   document.removeEventListener('keydown',onDocumentEscPress);
-  // // }
+// function closeModal() {
+//   modal.classList.remove("modal--opened");
+// }
 
-  // // const onPressedKey = (evt,code,callback) => {
-  // //   if (evt.key === code) {
-  // //     evt.preventDefault();
-  // //     callback();
-  // //   }
+// window.addEventListener("DOMContentLoaded", function() {
+//   function setCursorPosition(pos, elem) {
+//       elem.focus();
+//       if (elem.setSelectionRange) elem.setSelectionRange(pos, pos);
+//       else if (elem.createTextRange) {
+//           var range = elem.createTextRange();
+//           range.collapse(true);
+//           range.moveEnd("character", pos);
+//           range.moveStart("character", pos);
+//           range.select()
+//       }
+//   }
 
-  // const onMessageCloseByEmptyClick = (evt) => {
-  //   if (evt.target === document.querySelector('.modal')) {
-  //     return
-  //     // onSuccessBtnClick();
-  //   } else {
+//   function mask(event) {
+//       var matrix = "+7 (___) ___ ____",
+//           i = 0,
+//           def = matrix.replace(/\D/g, ""),
+//           val = this.value.replace(/\D/g, "");
+//       if (def.length >= val.length) val = def;
+//       this.value = matrix.replace(/./g, function(a) {
+//           return /[_\d]/.test(a) && i < val.length ? val.charAt(i++) : i >= val.length ? "" : a
+//       });
+//       if (event.type == "blur") {
+//           if (this.value.length == 2) this.value = ""
+//       } else setCursorPosition(this.value.length, this)
+//   };
+//       var input = document.querySelector("#tel");
+//       input.addEventListener("input", mask, false);
+//       input.addEventListener("focus", mask, false);
+//       input.addEventListener("blur", mask, false);
+//   });
 
-  //   }
-  //   if (evt.target === document.querySelector('.error')) {
-  //     onErrorBtnClick();
-  //   }
-  // }
+  // https://stackoverflow.com/questions/65387690/closing-modal-on-window-vanilla-js
 })();
