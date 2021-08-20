@@ -38,7 +38,7 @@
   width: 29.8vw;
   min-height: 15.5vw;
   position: relative;
-  border: 1px solid $grey2;
+  border: 1px solid $border-grey;
   border-left: 3px solid $blue;
   padding: 42px 44px;
   box-sizing: border-box;
@@ -46,7 +46,6 @@
   @media (max-width: $tablet-width) {
     width: 44.8vw;
     padding: 21px 22px 0;
-    // min-height: 306px;
   }
 
   @media (max-width: $mobile-width) {
@@ -60,6 +59,7 @@
 
   &:hover {
     background-color: $blue;
+    border: none;
   }
 }
 
@@ -110,10 +110,6 @@
 .company__item:hover .company__item-header,
 .company__item:hover .company__item-text {
   color: $white;
-}
-
-.company__item:hover .company__detective-icon {
-  fill: $white;
 }
 
 
@@ -263,4 +259,11 @@
   @media (max-width: $tablet-width) {
     padding: 13px 50px;
   }
+}
+
+.company__item:hover .company__hired-icon path,
+.company__item:hover .company__watch-icon path,
+.company__item:hover .company__detective-icon path,
+.company__item:hover .company__tag-icon path {
+  fill: $white;
 }
