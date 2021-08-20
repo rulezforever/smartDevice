@@ -17,25 +17,6 @@
     display: flex;
     justify-content: center;
   }
-
-  // &::before {
-  //   content: "";
-  //   position: absolute;
-  //   width: 1920px;
-  //   height: 950px;
-  //   background-image: url("../../img/triangle-desktop@1x.png");
-  //   background-repeat: no-repeat;
-  //   top: -40px;
-  //   left: 1029px;
-  //   z-index: -1;
-  //   background-color: transparent;
-
-  //   @media (max-width: $tablet-width) {
-  //     background-image: url("../../img/triangle-mobile@1x.png");
-  //     top: -112px;
-  //     left: 0;
-  //   }
-  // }
 }
 
 .promo__header {

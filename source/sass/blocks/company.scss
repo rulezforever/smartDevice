@@ -1,12 +1,15 @@
 .company {
   color: $grey;
   margin-bottom: 95px;
+  background: url("../img/company-back-desktop@1x.png") top -30px left no-repeat;
 
   @media (max-width: $tablet-width) {
+    background: url("../img/company-back-tablet@1x.png") top 88px left 211px no-repeat;
     margin-bottom: 66px;
   }
 
   @media (max-width: $mobile-width) {
+    background: url("../img/company-back-mobile@1x.png") top 679px left no-repeat;
     margin-bottom: 79px;
   }
 }
@@ -42,6 +45,7 @@
   border-left: 3px solid $blue;
   padding: 42px 44px;
   box-sizing: border-box;
+  background-color: $white;
 
   @media (max-width: $tablet-width) {
     width: 44.8vw;

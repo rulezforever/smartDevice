@@ -1,6 +1,11 @@
 .questions {
-  background-color: $blue;
+  background: url("../img/questions-back@1x.png") top -60px left 175px no-repeat,
+    $blue top left no-repeat;
   color: $white;
+
+  @media (max-width: $tablet-width) {
+    background: $blue top left no-repeat;
+  }
 }
 
 .questions__wrapper {
