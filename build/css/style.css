@@ -146,6 +146,9 @@ img {
       width: 32px;
       height: 32px; } }
 
+.page-header__logo {
+  cursor: auto; }
+
 .page-footer {
   flex: 0 0 auto;
   width: 100%; }
@@ -650,7 +653,7 @@ img {
       min-height: 310px; } }
   .company__item:hover {
     background-color: #00b2ff;
-    border: none; }
+    border: 1px solid #00b2ff; }
 
 @media (max-width: 1023px) {
   .company__list li:nth-of-type(1) {
@@ -1135,11 +1138,18 @@ img {
     .promo__scroll {
       display: none; } }
 
+@media (max-width: 1023px) {
+  .promo__image {
+    width: 260px;
+    height: 340px; } }
+
 @media (max-width: 767px) {
   .promo__image {
     position: absolute;
     top: -115px;
     left: 25px;
+    width: 294px;
+    height: 220px;
     z-index: -1; } }
 
 .questions {
@@ -1250,7 +1260,7 @@ img {
   height: 50px;
   box-sizing: border-box;
   outline: none;
-  color: white;
+  color: black;
   text-indent: 17px; }
   @media (max-width: 1023px) {
     .questions__input {
@@ -1264,6 +1274,8 @@ img {
     font-weight: 400;
     font-family: "PT Mono", "Courier New", monospace;
     color: white; }
+  .questions__input:focus, .questions__input:hover {
+    box-shadow: 0 0 0 1px white inset; }
 
 .questions__text {
   width: 570px;
@@ -1272,8 +1284,10 @@ img {
   outline: none;
   text-indent: 17px;
   padding-top: 12px;
-  color: white;
+  color: black;
   box-sizing: border-box; }
+  .questions__text:focus, .questions__text:hover {
+    box-shadow: 0 0 0 1px white inset; }
   .questions__text::placeholder {
     font-size: 16px;
     line-height: 134.4%;
@@ -1417,13 +1431,17 @@ img {
 .modal__text {
   background-color: rgba(255, 255, 255, 0.1);
   border: none; }
+  .modal__input:focus, .modal__input:hover,
+  .modal__text:focus,
+  .modal__text:hover {
+    box-shadow: 0 0 0 1px white inset; }
 
 .modal__input {
   width: 412px;
   height: 52px;
   box-sizing: border-box;
   outline: none;
-  color: white;
+  color: black;
   text-indent: 17px; }
   .modal__input::placeholder {
     font-size: 16px;
@@ -1439,7 +1457,7 @@ img {
   outline: none;
   text-indent: 17px;
   padding-top: 12px;
-  color: white;
+  color: black;
   box-sizing: border-box; }
   .modal__text::placeholder {
     font-size: 16px;

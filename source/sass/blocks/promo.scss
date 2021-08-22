@@ -183,10 +183,17 @@
 }
 
 .promo__image {
+  @media (max-width: $tablet-width) {
+    width: 260px;
+    height: 340px;
+  }
+
   @media (max-width: $mobile-width) {
     position: absolute;
     top: -115px;
     left: 25px;
+    width: 294px;
+    height: 220px;
     z-index: -1;
   }
 }

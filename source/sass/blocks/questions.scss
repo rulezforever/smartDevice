@@ -117,7 +117,7 @@
   height: 50px;
   box-sizing: border-box;
   outline: none;
-  color: $white;
+  color: $black;
   text-indent: 17px;
 
   @media (max-width: $tablet-width) {
@@ -133,6 +133,11 @@
     font-family: $secondary-font;
     color: $white;
   }
+
+  &:focus,
+  &:hover {
+    box-shadow: 0 0 0 1px $white inset;
+  }
 }
 
 .questions__text {
@@ -142,8 +147,13 @@
   outline: none;
   text-indent: 17px;
   padding-top: 12px;
-  color: $white;
+  color: $black;
   box-sizing: border-box;
+
+  &:focus,
+  &:hover {
+    box-shadow: 0 0 0 1px $white inset;
+  }
 
 
   &::placeholder {

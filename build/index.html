@@ -12,7 +12,6 @@
   <link rel="preload" href="fonts/robotocondensed-regular.woff" as="font" crossorigin>
   <link rel="preload" href="fonts/ptmono-regular.woff2" as="font" crossorigin>
   <link rel="preload" href="fonts/ptmono-regular.woff" as="font" crossorigin>
-  <script src="https://unpkg.com/imask"></script>
 </head>
 
 <body class="page-body">
@@ -20,7 +19,7 @@
     <header class="page-header wrapper">
 
       <nav class="main-nav main-nav--opened main-nav--nojs">
-        <a class="page-header__logo" href="index.html">
+        <a class="page-header__logo" href="#">
           <picture>
             <source media="(min-width: 768px)" srcset="img/icons/logo-icon.svg">
             <img class="page-header__logo-img" src="img/icons/logo-mobile.svg" width="32" height="32"
@@ -53,9 +52,13 @@
       <a class="promo__scroll" href="#benefits">Скролл вниз</a>
     </div>
     <picture>
-      <source media="(max-width: 767px)" srcset="img/board-mobile@1x.png 1x, img/board-mobile@2x.png 2x">
-      <source media="(max-width: 1023px)" srcset="img/board-tablet@1x.png 1x, img/board-tablet@2x.png 2x">
-      <img class="promo__image" src="img/board-desktop@1x.png" srcset="img/board-desktop@2x.png 2x" alt="Платы">
+      <source media="(max-width: 767px)" type="image/webp" srcset="img/board-mobile@1x.webp 1x, img/board-mobile@2x.webp 2x">
+      <source media="(max-width: 767px)" type="image/png" srcset="img/board-mobile@1x.png 1x, img/board-mobile@2x.png 2x">
+      <source media="(max-width: 1023px)" type="image/webp" srcset="img/board-tablet@1x.webp 1x, img/board-tablet@2x.webp 2x">
+      <source media="(max-width: 1023px)" type="image/png" srcset="img/board-tablet@1x.png 1x, img/board-tablet@2x.png 2x">
+      <source type="image/webp" srcset="img/board-desktop@1x.webp 1x, img/board-desktop@2x.webp 2x">
+      <img class="promo__image" src="img/board-desktop@1x.png" srcset="img/board-desktop@2x.png 2x" width="705"
+        height="515" alt="Платы">
     </picture>
   </section>
   <div class="page-wrapper">
@@ -169,8 +172,8 @@
         </ul>
         <div class="company__wrapper">
           <picture>
-            <source media="(min-resolution: 2dppx)" srcset="img/company2005-tablet@2x.png">
-            <img class="company__image" src="img/company2005-tablet@1x.png" width="179" height="361" alt="2005">
+            <source type="image/webp" srcset="img/company2005-tablet@1x.webp 1x, img/company2005-tablet@2x.webp 2x">
+            <img class="company__image" src="img/company2005-tablet@1x.png" srcset="img/company2005-tablet@2x.png 2x" width="179" height="361" alt="2005">
           </picture>
           <div class="company__container">
             <h2 class="company__title">О компании</h2>
@@ -184,7 +187,7 @@
                 РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители
                 светотехники России.</span>
             </p>
-            <a class="company__button button">Подробнее</a>
+            <a class="company__button button" href="#">Подробнее</a>
           </div>
         </div>
       </section>
