@@ -2,7 +2,6 @@
   position: fixed;
   top: 137px;
   right: -16px;
-  // bottom: 0;
   left: 0;
   margin: auto;
   background-color: $blue;
@@ -61,8 +60,8 @@
   flex-direction: column;
 }
 
-.modal__input,
-.modal__text {
+.modal__contacts input,
+.modal__contacts textarea {
   background-color: $white-opacity;
   border: none;
 
@@ -72,7 +71,7 @@
   }
 }
 
-.modal__input {
+.modal__contacts input {
   width: 412px;
   height: 52px;
   box-sizing: border-box;
@@ -87,7 +86,7 @@
   }
 }
 
-.modal__text {
+.modal__contacts textarea {
   width: 412px;
   height: 104px;
   margin-bottom: 16px;

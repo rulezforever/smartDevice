@@ -106,13 +106,13 @@
   }
 }
 
-.questions__input,
-.questions__text {
+.questions__contacts input,
+.questions__item textarea {
   background-color: $white-opacity;
   border: none;
 }
 
-.questions__input {
+.questions__contacts input {
   width: 270px;
   height: 50px;
   box-sizing: border-box;
@@ -140,7 +140,7 @@
   }
 }
 
-.questions__text {
+.questions__item textarea {
   width: 570px;
   height: 154px;
   margin-bottom: 38px;

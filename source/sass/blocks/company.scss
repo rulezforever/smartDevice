@@ -20,7 +20,7 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: stretch;
-  width: 63%;
+  width: 64%;
   margin: 0 auto;
   padding-top: 110px;
   gap: 30px;
@@ -265,9 +265,16 @@
   }
 }
 
-.company__item:hover .company__hired-icon path,
-.company__item:hover .company__watch-icon path,
-.company__item:hover .company__detective-icon path,
-.company__item:hover .company__tag-icon path {
+.company__item:hover .company__hired-icon,
+.company__item:hover .company__watch-icon,
+.company__item:hover .company__detective-icon,
+.company__item:hover .company__tag-icon {
   fill: $white;
+}
+
+.company__hired-icon,
+.company__watch-icon,
+.company__detective-icon,
+.company__tag-icon {
+  fill: $blue;
 }

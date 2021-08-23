@@ -1,6 +1,13 @@
-(function () {
+// import IMask from 'до корня выйти/../node_modules/что-то там/imask';
+// import IMask from '../../node_modules/imask';
+// import {IMask} from '../js/vendors.js';
+// import 'vendors.js';
 
-  const SYMBOLS_PATTERN = /\+7\(\d{3}\)\d{3}-\d{2}-\d{2}/;
+(function () {
+  // import IMask from '../js/vendors.js';
+  // import {IMask} from '../../node_modules/imask/dist/imask.js';
+  // import 'vendors.js';
+  // const SYMBOLS_PATTERN = /\+7\(\d{3}\)\d{3}-\d{2}-\d{2}/;
 
   const  callButton = document.querySelector('.main-nav__button');
   const modalClose = document.querySelector('.modal__close');
@@ -9,7 +16,7 @@
   const phoneInput = document.querySelector('.modal__input--phone');
 
 
-  const isStorageSupport = true;
+  var isStorageSupport = true;
   const storageName = '';
   const storagePhone = '';
   const storageQuestion = '';
@@ -44,7 +51,7 @@
 
   modalClose.addEventListener('click', modalCloseHandler);
 
-  window.addEventListener("keydown", function (evt) {
+  window.addEventListener('keydown', function (evt) {
     if (evt.keyCode === 27) {
       if (modal.classList.contains('modal--opened')) {
         evt.preventDefault();
@@ -88,7 +95,7 @@ const officeButton = document.querySelector('.page-footer__office-btn');
 site.classList.remove('page-footer__site--opened');
 office.classList.remove('page-footer__office--opened');
 
-siteButton.addEventListener('click', function() {;
+siteButton.addEventListener('click', function() {
     office.classList.remove('page-footer__office--opened');
     site.classList.toggle('page-footer__site--opened');
 });
@@ -98,4 +105,10 @@ officeButton.addEventListener('click', function() {
     office.classList.toggle('page-footer__office--opened');
 });
 
+// var phoneMask = IMask(
+//   document.getElementById('phone-mask'), {
+//     mask: '+{7}(000)000-00-00'
+//   });
+
+//   console.log(phoneMask);
 })();
