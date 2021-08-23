@@ -1,19 +1,9 @@
-// import IMask from 'до корня выйти/../node_modules/что-то там/imask';
-// import IMask from '../../node_modules/imask';
-// import {IMask} from '../js/vendors.js';
-// import 'vendors.js';
-
 (function () {
-  // import IMask from '../js/vendors.js';
-  // import {IMask} from '../../node_modules/imask/dist/imask.js';
-  // import 'vendors.js';
-  // const SYMBOLS_PATTERN = /\+7\(\d{3}\)\d{3}-\d{2}-\d{2}/;
 
   const  callButton = document.querySelector('.main-nav__button');
   const modalClose = document.querySelector('.modal__close');
   const  modal = document.querySelector('.modal');
   const nameInput = document.querySelector('.modal__input--name');
-  const phoneInput = document.querySelector('.modal__input--phone');
 
 
   var isStorageSupport = true;
@@ -89,6 +79,8 @@ promo.addEventListener('click', function (evt){
 
 const site = document.querySelector('.page-footer__site');
 const office = document.querySelector('.page-footer__office');
+const siteContainer = document.querySelector('.page-footer__site-container');
+const officeContainer = document.querySelector('.page-footer__office-container');
 const siteButton = document.querySelector('.page-footer__text-btn');
 const officeButton = document.querySelector('.page-footer__office-btn');
 
@@ -96,19 +88,18 @@ site.classList.remove('page-footer__site--opened');
 office.classList.remove('page-footer__office--opened');
 
 siteButton.addEventListener('click', function() {
-    office.classList.remove('page-footer__office--opened');
-    site.classList.toggle('page-footer__site--opened');
+  office.classList.remove('page-footer__office--opened');
+  site.classList.toggle('page-footer__site--opened');
 });
 
 officeButton.addEventListener('click', function() {
-    site.classList.remove('page-footer__site--opened');
-    office.classList.toggle('page-footer__office--opened');
+  site.classList.remove('page-footer__site--opened');
+  office.classList.toggle('page-footer__office--opened');
 });
 
-// var phoneMask = IMask(
-//   document.getElementById('phone-mask'), {
-//     mask: '+{7}(000)000-00-00'
-//   });
+var phoneMask = IMask(
+  document.getElementById('phone'), {
+    mask: '+{7}(000)000-00-00'
+  });
 
-//   console.log(phoneMask);
 })();
