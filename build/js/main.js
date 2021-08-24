@@ -1,15 +1,16 @@
+// import 'vendors.js'
+// import {IMask} from 'vendors.js'
+
 (function () {
 
   const  callButton = document.querySelector('.main-nav__button');
   const modalClose = document.querySelector('.modal__close');
   const  modal = document.querySelector('.modal');
-  const nameInput = document.querySelector('.modal__input--name');
+  const nameInput = document.getElementById('your_name');
+  const overlay = document.querySelector('.page-body__overlay');
 
 
   var isStorageSupport = true;
-  const storageName = '';
-  const storagePhone = '';
-  const storageQuestion = '';
 
   try {
     storage = localStorage.getItem('your_name');
@@ -30,16 +31,19 @@
   }
 
   callButton.addEventListener('click', function () {
+    overlay.classList.add('page-body__overlay--view');
     modal.classList.add('modal--opened');
     nameInput.focus();
   });
 
   const modalCloseHandler =(evt) => {
     evt.preventDefault();
+    overlay.classList.remove('page-body__overlay--view');
     modal.classList.remove('modal--opened');
   }
 
   modalClose.addEventListener('click', modalCloseHandler);
+  overlay.addEventListener('click', modalCloseHandler);
 
   window.addEventListener('keydown', function (evt) {
     if (evt.keyCode === 27) {
@@ -79,20 +83,18 @@ promo.addEventListener('click', function (evt){
 
 const site = document.querySelector('.page-footer__site');
 const office = document.querySelector('.page-footer__office');
-const siteContainer = document.querySelector('.page-footer__site-container');
 const officeContainer = document.querySelector('.page-footer__office-container');
-const siteButton = document.querySelector('.page-footer__text-btn');
-const officeButton = document.querySelector('.page-footer__office-btn');
+const siteContainer = document.querySelector('.page-footer__site-container');
 
 site.classList.remove('page-footer__site--opened');
 office.classList.remove('page-footer__office--opened');
 
-siteButton.addEventListener('click', function() {
+siteContainer.addEventListener('click', function() {
   office.classList.remove('page-footer__office--opened');
   site.classList.toggle('page-footer__site--opened');
 });
 
-officeButton.addEventListener('click', function() {
+officeContainer.addEventListener('click', function() {
   site.classList.remove('page-footer__site--opened');
   office.classList.toggle('page-footer__office--opened');
 });

@@ -10,6 +10,7 @@
   height: 605px;
   box-sizing: border-box;
   display: none;
+  z-index: 3;
 
   &--opened {
     display: block;
@@ -148,6 +149,10 @@
   border-bottom: 1px solid $white;
   box-sizing: border-box;
   transform: rotate(-45deg);
+}
+
+.modal__check:invalid {
+  transform: translateY(95px);
 }
 
 .modal__close {

@@ -352,6 +352,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  cursor: pointer;
 
   @media (max-width: $mobile-width) {
     padding: 13px 0;
@@ -362,6 +363,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  cursor: pointer;
 
   @media (max-width: $mobile-width) {
     padding: 13px 0;

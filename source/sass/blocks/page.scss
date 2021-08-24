@@ -21,6 +21,10 @@
   width: 100%;
 }
 
+.page-body__overlay--view {
+  display: block;
+}
+
 .page-container {
   &::before {
     content: "";

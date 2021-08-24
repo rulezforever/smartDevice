@@ -74,14 +74,14 @@
     width: 63px;
     height: 63px;
     background-color: $blue;
-    bottom: 3px;
+    bottom: 6px;
     right: 0;
   }
 
   &::after {
     content: "";
     position: absolute;
-    bottom: 27px;
+    bottom: 30px;
     right: 30px;
     width: 6px;
     height: 6px;
@@ -124,4 +124,8 @@
     width: 100%;
     padding-left: 2.5vw;
   }
+}
+
+.service__item a {
+  display: block;
 }
