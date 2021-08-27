@@ -175,6 +175,11 @@
   opacity: 50%;
   transform: rotate(-90deg);
   transform-origin: left top;
+  width: 100px;
+
+  &:hover {
+    opacity: 0.7;
+  }
 
   @media (max-width: $tablet-width) {
     display: none;

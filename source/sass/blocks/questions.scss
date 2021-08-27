@@ -149,6 +149,7 @@
   padding-top: 12px;
   color: $black;
   box-sizing: border-box;
+  resize: none;
 
   &:focus,
   &:hover {
@@ -202,6 +203,10 @@
   padding-top: 8px;
   padding-left: 35px;
 
+  &:hover {
+    opacity: 0.7;
+  }
+
   @media (max-width: $tablet-width) {
     width: 31vw;
   }
@@ -234,6 +239,10 @@
   border-bottom: 1px solid $white;
   box-sizing: border-box;
   transform: rotate(-45deg);
+}
+
+.questions__check:focus + label::before {
+  outline: 1px solid $black;
 }
 
 .questions__item {

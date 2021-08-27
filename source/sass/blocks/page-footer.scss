@@ -157,7 +157,7 @@
 
 .page-footer__logo-img {
   padding-left: 12px;
-  padding-top: 60px;
+  // padding-top: 60px;
 
   @media (max-width: $tablet-width) {
     padding-left: 28px;
@@ -245,6 +245,7 @@
   @media (max-width: $mobile-width) {
     width: 88vw;
     padding-left: 15px;
+    padding-bottom: 20px;
     display: none;
   }
 }
@@ -272,6 +273,10 @@
 
 .page-footer__text-item a {
   color: $dark;
+
+  &:hover {
+    opacity: 0.7;
+  }
 }
 
 .page-footer__text-btn {
@@ -343,7 +348,12 @@
 }
 
 .page-footer__link {
+  cursor: auto;
+  pointer-events: none;
+  margin-top: 60px;
+
   @media (max-width: $tablet-width) {
+    margin-top: 0;
     padding-right: 11vw;
   }
 }
@@ -352,10 +362,13 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  cursor: pointer;
+  cursor: auto;
+  pointer-events: none;
 
   @media (max-width: $mobile-width) {
     padding: 13px 0;
+    cursor: pointer;
+    pointer-events: auto;
   }
 }
 
@@ -363,10 +376,13 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  cursor: pointer;
+  cursor: auto;
+  pointer-events: none;
 
   @media (max-width: $mobile-width) {
     padding: 13px 0;
+    cursor: pointer;
+    pointer-events: auto;
   }
 }
 
@@ -384,5 +400,5 @@
 .page-footer__site--nojs .page-footer__text-list,
 .page-footer__office--opened .page-footer__office-list,
 .page-footer__office--nojs .page-footer__office-list {
-  display: block;
+  display: flex;
 }

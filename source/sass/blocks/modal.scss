@@ -96,7 +96,7 @@
   padding-top: 12px;
   color: $black;
   box-sizing: border-box;
-
+  resize: none;
 
   &::placeholder {
     @include font-set(16px, 22px, 400);
@@ -153,6 +153,10 @@
 
 .modal__check:invalid {
   transform: translateY(95px);
+}
+
+.modal__check:focus + label::before {
+  outline: 1px solid $black;
 }
 
 .modal__close {
