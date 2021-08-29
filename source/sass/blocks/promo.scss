@@ -14,8 +14,11 @@
   @media (max-width: $mobile-width) {
     margin-bottom: 0;
     min-height: 425px;
-    display: flex;
+    // display: flex;
     justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
   }
 }
 
@@ -35,9 +38,12 @@
   }
 
   @media (max-width: $mobile-width) {
-    padding-left: 15px;
+    padding-left: 0;
     width: 100%;
     align-content: center;
+    order: 1;
+    padding-top: 0;
+    transform: translateY(-36px);
   }
 }
 
@@ -60,6 +66,7 @@
   @media (max-width: $mobile-width) {
     @include font-set(40px, 48px, 700);
     letter-spacing: 3px;
+    width: 200px;
   }
 }
 
@@ -193,11 +200,15 @@
   }
 
   @media (max-width: $mobile-width) {
-    position: absolute;
-    top: -115px;
-    left: 25px;
-    width: 294px;
+    order: 2;
+    width: 301px;
     height: 220px;
-    z-index: -1;
+    padding-left: 22px;
+    // position: absolute;
+    // top: -115px;
+    // left: 25px;
+    // width: 294px;
+    // height: 220px;
+    // z-index: -1;
   }
 }

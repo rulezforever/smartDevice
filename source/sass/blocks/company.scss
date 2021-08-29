@@ -20,7 +20,7 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: stretch;
-  width: 64%;
+  width: 90vw;
   margin: 0 auto;
   padding-top: 110px;
   gap: 30px;
@@ -34,11 +34,12 @@
 
   @media (max-width: $mobile-width) {
     gap: 20px;
+    padding-top: 40px;
   }
 }
 
 .company__item {
-  width: 29.8vw;
+  width: 570px;
   min-height: 15.5vw;
   position: relative;
   border: 1px solid $border-grey;
@@ -49,6 +50,7 @@
 
   @media (max-width: $tablet-width) {
     width: 44.8vw;
+    height: auto;
     padding: 21px 22px 0;
   }
 
@@ -139,7 +141,7 @@
 .company__item p {
   @include font-set(16px, 134.4%, 400);
   font-family: $secondary-font;
-  width: 25vw;
+  width: 480px;
 
   @media (max-width: $tablet-width) {
     width: 38vw;
@@ -163,7 +165,9 @@
 
   @media (max-width: $mobile-width) {
     width: 100%;
-    padding-left: 15px;
+    padding-left: 0;
+    display: flex;
+    justify-content: center;
   }
 }
 
@@ -178,6 +182,10 @@
   @media (max-width: $tablet-width) {
     padding-top: 60px;
     padding-left: 0;
+  }
+
+  @media (max-width: $mobile-width) {
+    align-content: center;
   }
 }
 
@@ -213,6 +221,7 @@
   @include font-set(16px, 134.4%, 400);
   font-family: $secondary-font;
   width: 51vw;
+  // width: 980px;
   margin: 0;
   margin-bottom: 54px;
 
@@ -224,7 +233,7 @@
   }
 
   @media (max-width: $mobile-width) {
-    width: 95%;
+    width: 290px;
     height: 328px;
   }
 }

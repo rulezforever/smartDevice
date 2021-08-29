@@ -30,11 +30,13 @@
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
-  width: 75%;
+  // width: 75%;
+  width: 100vw;
   justify-content: center;
   margin: 0 auto;
 
   @media (max-width: $tablet-width) {
+    width: 100%;
     gap: 44px;
   }
 
@@ -51,7 +53,7 @@
   top: 52px;
   left: 43px;
   margin: 0;
-  width: 8vw;
+  width: 154px;
 
   @media (max-width: $tablet-width) {
     top: 46px;
@@ -97,7 +99,9 @@
 }
 
 .service__image {
-  width: 19.2vw;
+  // width: 19.2vw;
+  width: 370px;
+  height: 620px;
 
   @media (max-width: $tablet-width) {
     width: 720px;

@@ -70,9 +70,10 @@
       height: 647px;
 
       @media (min-resolution: 2dppx) {
-        background: url("../img/backpromo-mobile@1x.png") top left no-repeat,
-          url("../img/triangle-mobile@1x.png") top right no-repeat;
+        background: url("../img/backpromo-mobile@2x.png") top left no-repeat,
+          url("../img/triangle-mobile@2x.png") top right  no-repeat;
         background-color: $dark;
+        background-size: cover;
       }
     }
   }
