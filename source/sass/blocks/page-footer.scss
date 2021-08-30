@@ -5,6 +5,10 @@
   flex-direction: column;
   justify-content: center;
   gap: 29px;
+
+  @media (max-width: $tablet-width) {
+    gap: 0;
+  }
 }
 
 .page-wrapper {
@@ -18,8 +22,6 @@
   flex-wrap: wrap;
   margin: 0 auto;
   margin-bottom: 34px;
-  // width: 75vw;
-  // justify-content: center;
 
   @media (max-width: $mobile-width) {
     flex-direction: column;
@@ -32,13 +34,11 @@
   flex-wrap: wrap;
   flex-direction: column;
   padding-right: 10.3vw;
-  // width: 228px;
 
   @media (max-width: $tablet-width) {
     width: 100vw;
     flex-direction: row;
     padding-right: 0;
-    justify-content: center;
   }
 
   @media (max-width: $mobile-width) {
@@ -98,7 +98,6 @@
   flex-wrap: wrap;
   padding-top: 20px;
   padding-bottom: 20px;
-  // width: 74vw;
 
   @media (max-width: 1262px) {
     width: 100vw;
@@ -107,11 +106,11 @@
 
   @media (max-width: $tablet-width) {
     padding-top: 28px;
-    padding-bottom: 0;
+    padding-bottom: 28px;
     width: 100vw;
     justify-content: space-between;
     padding-left: 3.5vw;
-    padding-right: 1vw;
+    padding-right: 3vw;
   }
 
   @media (max-width: $mobile-width) {
@@ -206,6 +205,7 @@
     padding-top: 24px;
     padding-left: 11px;
     padding-right: 20px;
+    width: auto;
   }
 
   @media (max-width: $mobile-width) {
@@ -258,15 +258,14 @@
   @include list-reset;
   display: flex;
   flex-wrap: wrap;
-  // flex-direction: column;
-  // height: 124px;
   width: 26vw;
   padding-left: 0;
   gap: 3.2vw;
 
   @media (max-width: $tablet-width) {
     height: auto;
-    width: 31vw;
+    width: 32vw;
+    gap: 0;
   }
 
   @media (max-width: $mobile-width) {
@@ -297,6 +296,10 @@
   color: $dark;
   opacity: 0.5;
   padding-left: 10px;
+
+  @media (max-width: $mobile-width) {
+    padding-left: 0;
+  }
 }
 
 .page-footer__text-item a {
