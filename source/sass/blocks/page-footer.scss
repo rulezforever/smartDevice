@@ -96,8 +96,9 @@
   @include list-reset;
   display: flex;
   flex-wrap: wrap;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 74vw;
 
   @media (max-width: 1262px) {
     width: 100vw;
@@ -132,6 +133,11 @@
   box-sizing: border-box;
   display: flex;
   align-items: center;
+  padding: 10px 0;
+
+  &:not(:nth-of-type(4)) {
+    margin-right: 3vw;
+  }
 
   &:nth-of-type(1) {
     margin-right: 3.9vw;
@@ -437,9 +443,4 @@
 .page-footer__text-list-left,
 .page-footer__text-list-right {
   @include list-reset;
-  // display: flex;
-  // flex-wrap: wrap;
-  // flex-direction: column;
-
-  // height: 124px;
 }

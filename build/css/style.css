@@ -233,8 +233,9 @@ img {
   padding: 0;
   display: flex;
   flex-wrap: wrap;
-  padding-top: 20px;
-  padding-bottom: 20px; }
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 74vw; }
   @media (max-width: 1262px) {
     .page-footer__copyright-list {
       width: 100vw;
@@ -266,7 +267,10 @@ img {
   opacity: 0.5;
   box-sizing: border-box;
   display: flex;
-  align-items: center; }
+  align-items: center;
+  padding: 10px 0; }
+  .page-footer__copyright-item:not(:nth-of-type(4)) {
+    margin-right: 3vw; }
   .page-footer__copyright-item:nth-of-type(1) {
     margin-right: 3.9vw; }
     @media (max-width: 1262px) {
