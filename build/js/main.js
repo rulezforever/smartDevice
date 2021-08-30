@@ -1,6 +1,3 @@
-// import 'vendors.js'
-// import {IMask} from 'vendors.js'
-
 (function () {
 
   const  callButton = document.querySelector('.main-nav__button');
@@ -57,6 +54,8 @@
       if (modal.classList.contains('modal--opened')) {
         evt.preventDefault();
         modal.classList.remove('modal--opened');
+        overlay.classList.remove('page-body__overlay--view');
+        pageBody.style.overflow = "auto";
       }
     }
   });
