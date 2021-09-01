@@ -30,7 +30,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
-  width: 100%;
+  width: 70%;
   justify-content: center;
   margin: 0 auto;
 
@@ -63,7 +63,7 @@
   @media (max-width: $mobile-width) {
     top: 22px;
     left: 30px;
-    width: 50vw;
+    width: 151px;
   }
 }
 

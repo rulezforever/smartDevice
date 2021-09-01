@@ -20,7 +20,7 @@
     <header class="page-header wrapper">
 
       <nav class="main-nav main-nav--opened main-nav--nojs">
-        <a class="page-header__logo" href="#">
+        <a class="page-header__logo">
           <picture>
             <source media="(max-width: 767px)" srcset="img/icons/logo-mobile.svg">
             <img class="page-header__logo-img" src="img/icons/logo-icon.svg" width="202" height="52"
@@ -38,7 +38,7 @@
             </a>
           </li>
           <li class="main-nav__item">
-            <button class="main-nav__button button" type="button" id="open">Заказать звонок</button>
+            <button class="main-nav__button button" type="button" id="button">Заказать звонок</button>
           </li>
         </ul>
       </nav>
@@ -250,7 +250,7 @@
     <footer class="page-footer wrapper">
       <div class="page-footer__wrapper">
         <div class="page-footer__logo">
-          <a class="page-footer__link" href="#">
+          <a class="page-footer__link">
             <img class="page-footer__logo-img" src="img/icons/logo-footer.svg" width="216" height="52"
               alt="Логотип Smart Device">
           </a>
@@ -341,7 +341,7 @@
     </footer>
   </div>
 
-  <section class="modal">
+  <dialog id="modal" class="modal">
     <div class="modal__wrapper">
       <h2 class="modal__title">Закажите звонок</h2>
       <p class="modal__slogan">Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
@@ -364,9 +364,9 @@
           </p>
         </fieldset>
       </form>
-      <button class="modal__close" type="button" id="close" aria-label="Закрыть"></button>
+      <button class="modal__close" tabindex="0" type="button" id="close" aria-label="Закрыть"></button>
     </div>
-  </section>
+  </dialog>
   <div class="page-body__overlay"></div>
   <script src="js/main.js"></script>
 

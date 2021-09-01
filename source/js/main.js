@@ -39,6 +39,37 @@
     }
   });
 
+
+// Делаю как здесь - https://css-tricks.com/a-css-approach-to-trap-focus-inside-of-an-element/
+
+// сss для dialog в файле modal.scss
+
+//   var isDialogSupported =true;
+//   if(!window.HTMLDialogElement) {
+//     document.body.classList.add('no-dialog');
+//     isDialogSupported = false;
+//   }
+
+//  callButton.onclick = () => {
+//     if (isDialogSupported) {
+//       overlay.classList.add('page-body__overlay--view');
+//         modal.classList.add('modal--opened');
+//         nameInput.focus();
+//         if (modal.classList.contains('modal--opened')) {
+//           pageBody.style.overflow = "hidden";
+//         } else {
+//           pageBody.style.overflow = "auto";
+//         }
+//     } else {
+//       modal.setAttribute("open", "");
+//     }
+//     nameInput.focus();
+//   };
+
+//   modal.addEventListener('transitionend', e => {
+//     nameInput.focus();
+//   });
+
   const modalCloseHandler =(evt) => {
     evt.preventDefault();
     overlay.classList.remove('page-body__overlay--view');

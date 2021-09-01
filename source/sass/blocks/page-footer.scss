@@ -205,7 +205,7 @@
   gap: 16px;
   padding-top: 48px;
   padding-left: 13px;
-  width: 100%;
+  width: 56%;
 
   @media (max-width: $tablet-width) {
     padding-top: 24px;
@@ -268,6 +268,11 @@
   padding-left: 0;
   gap: 3.2vw;
 
+  @media (max-width: 1627px) {
+    width: 16vw;
+    gap: 0;
+  }
+
   @media (max-width: $tablet-width) {
     height: auto;
     width: 32vw;
@@ -275,7 +280,7 @@
   }
 
   @media (max-width: $mobile-width) {
-    width: 88vw;
+    width: 250px;
     padding-left: 15px;
     padding-bottom: 20px;
     display: none;

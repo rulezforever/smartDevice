@@ -4,13 +4,14 @@
   right: -16px;
   left: 0;
   margin: auto;
-  background-color: $blue;
+  // background-color: $blue;
   color: $white;
   width: 490px;
   height: 605px;
   box-sizing: border-box;
   display: none;
   z-index: 3;
+  border: none;
 
   &--opened {
     display: block;
@@ -21,7 +22,7 @@
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  padding: 29px 40px;
+  padding: 29px 40px 0;
   box-sizing: border-box;
 }
 
@@ -121,7 +122,7 @@
   font-family: $secondary-font;
   position: relative;
   cursor: pointer;
-  width: 18vw;
+  width: 316px;
   padding-top: 8px;
   padding-left: 49px;
 }
@@ -167,6 +168,13 @@
   right: 0;
   cursor: pointer;
 
+  &:focus {
+    &::before,
+    &::after {
+      border: 1px solid $black;
+    }
+  }
+
   &::before,
   &::after {
     content: "";
@@ -193,5 +201,23 @@
 }
 
 .modal-show .page-body__overlay {
+  display: block;
+}
+
+
+dialog {
+  background-color: $blue;
+}
+
+dialog[open]:not(:focus-within) {
+  background-color: rgb(0, 178, 250);
+  transition: background-color 0.01s ease;
+}
+
+.no-dialog dialog {
+  display: none;
+}
+
+.no-dialog dialog[open] {
   display: block;
 }

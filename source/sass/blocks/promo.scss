@@ -66,7 +66,7 @@
   @media (max-width: $mobile-width) {
     @include font-set(40px, 48px, 700);
     letter-spacing: 3px;
-    width: 200px;
+    width: 92vw;
   }
 }
 
@@ -104,7 +104,7 @@
 
   @media (max-width: $mobile-width) {
     @include font-set(16px, 156.8%, 400);
-    width: 245px;
+    width: 72vw;
   }
 }
 
@@ -169,9 +169,10 @@
   }
 
   @media (max-width: $mobile-width) {
-    width: 287px;
+    width: 89vw;
     margin: 0 auto;
-    display: block;
+    display: flex;
+    justify-content: center;
   }
 }
 
@@ -203,12 +204,6 @@
     order: 2;
     width: 301px;
     height: 220px;
-    padding-left: 22px;
-    // position: absolute;
-    // top: -115px;
-    // left: 25px;
-    // width: 294px;
-    // height: 220px;
-    // z-index: -1;
+    padding-left: 19px;
   }
 }
