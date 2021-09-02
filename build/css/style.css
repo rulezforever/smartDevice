@@ -860,6 +860,9 @@ img {
       text-overflow: ellipsis; } }
   @media (max-width: 767px) {
     .company__slogan {
+      width: 90vw; } }
+  @media (max-width: 320px) {
+    .company__slogan {
       width: 290px;
       height: 328px; } }
 
@@ -1472,13 +1475,17 @@ img {
   right: -16px;
   left: 0;
   margin: auto;
+  background-color: #00b2ff;
   color: white;
   width: 490px;
   height: 605px;
+  max-width: 100%;
+  max-height: 100%;
   box-sizing: border-box;
   display: none;
   z-index: 3;
-  border: none; }
+  border: none;
+  overflow: auto; }
   .modal--opened {
     display: block; }
 
@@ -1486,7 +1493,7 @@ img {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  padding: 29px 40px 0;
+  padding: 15px 25px 0;
   box-sizing: border-box; }
 
 .modal fieldset {
