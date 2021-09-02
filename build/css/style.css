@@ -149,11 +149,11 @@ img {
 
 .page-footer {
   flex: 0 0 auto;
-  width: 100%;
+  width: 99%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 29px; }
+  gap: 22px; }
   @media (max-width: 1023px) {
     .page-footer {
       gap: 0; } }
@@ -166,7 +166,7 @@ img {
 .page-footer__wrapper {
   display: flex;
   flex-wrap: wrap;
-  margin: 0 auto;
+  margin: 9px auto;
   margin-bottom: 34px; }
   @media (max-width: 767px) {
     .page-footer__wrapper {
@@ -323,7 +323,7 @@ img {
   gap: 16px;
   padding-top: 48px;
   padding-left: 13px;
-  width: 56%; }
+  width: 120px; }
   @media (max-width: 1023px) {
     .page-footer__social-list {
       padding-top: 24px;
@@ -601,7 +601,7 @@ img {
     position: absolute;
     background: url("../img/icons/mail-icon.svg") no-repeat;
     top: 2px;
-    left: 2px;
+    left: -3px;
     width: 19px;
     height: 14px; }
     @media (max-width: 1023px) {
