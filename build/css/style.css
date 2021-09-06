@@ -1362,7 +1362,7 @@ img {
         margin-top: 35px; } }
   .questions__contacts input::placeholder {
     font-size: 16px;
-    line-height: 134.4%;
+    line-height: 100%;
     font-weight: 400;
     font-family: "PT Mono", "Courier New", monospace;
     color: white; }

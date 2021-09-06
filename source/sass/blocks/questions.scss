@@ -132,9 +132,10 @@
   }
 
   &::placeholder {
-    @include font-set(16px, 134.4%, 400);
+    @include font-set(16px, 134,4%, 400);
     font-family: $secondary-font;
     color: $white;
+    overflow: visible;
   }
 
   &:focus,
