@@ -936,7 +936,6 @@ img {
   padding: 0;
   display: flex;
   flex-wrap: wrap;
-  gap: 30px;
   width: 70%;
   justify-content: center;
   margin: 0 auto; }
@@ -972,6 +971,8 @@ img {
 
 .service__item {
   position: relative; }
+  .service__item:not(:nth-of-type(1)) {
+    padding-left: 30px; }
   .service__item::before {
     content: "";
     position: absolute;
@@ -1362,10 +1363,11 @@ img {
         margin-top: 35px; } }
   .questions__contacts input::placeholder {
     font-size: 16px;
-    line-height: 100%;
+    line-height: 134.4%;
     font-weight: 400;
     font-family: "PT Mono", "Courier New", monospace;
-    color: white; }
+    color: white;
+    overflow: visible; }
   .questions__contacts input:focus, .questions__contacts input:hover {
     box-shadow: 0 0 0 1px white inset; }
 
