@@ -50,12 +50,7 @@
 }
 
 .modal__contacts {
-  gap: 30px;
   margin: 0;
-}
-
-.modal__send {
-  gap: 24px;
 }
 
 .modal__contacts,
@@ -84,10 +79,15 @@
   color: $black;
   text-indent: 17px;
 
+  &:not(:nth-of-type(1)) {
+    margin-top: 30px;
+  }
+
   &::placeholder {
     @include font-set(16px, 22px, 400);
     font-family: $secondary-font;
     color: $white;
+    overflow: visible;
   }
 }
 
@@ -101,11 +101,13 @@
   color: $black;
   box-sizing: border-box;
   resize: none;
+  margin-top: 30px;
 
   &::placeholder {
     @include font-set(16px, 22px, 400);
     font-family: $secondary-font;
     color: $white;
+    overflow: visible;
   }
 }
 
@@ -114,6 +116,7 @@
   cursor: pointer;
   letter-spacing: 1px;
   padding: 14px 0;
+  margin-bottom: 24px;
 
   &:hover {
     opacity: 0.7;

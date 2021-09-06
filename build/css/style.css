@@ -1520,11 +1520,7 @@ img {
   margin-bottom: 33px; }
 
 .modal__contacts {
-  gap: 30px;
   margin: 0; }
-
-.modal__send {
-  gap: 24px; }
 
 .modal__contacts,
 .modal__send {
@@ -1548,12 +1544,15 @@ img {
   outline: none;
   color: black;
   text-indent: 17px; }
+  .modal__contacts input:not(:nth-of-type(1)) {
+    margin-top: 30px; }
   .modal__contacts input::placeholder {
     font-size: 16px;
     line-height: 22px;
     font-weight: 400;
     font-family: "PT Mono", "Courier New", monospace;
-    color: white; }
+    color: white;
+    overflow: visible; }
 
 .modal__contacts textarea {
   width: 412px;
@@ -1564,19 +1563,22 @@ img {
   padding-top: 12px;
   color: black;
   box-sizing: border-box;
-  resize: none; }
+  resize: none;
+  margin-top: 30px; }
   .modal__contacts textarea::placeholder {
     font-size: 16px;
     line-height: 22px;
     font-weight: 400;
     font-family: "PT Mono", "Courier New", monospace;
-    color: white; }
+    color: white;
+    overflow: visible; }
 
 .modal__button {
   width: 412px;
   cursor: pointer;
   letter-spacing: 1px;
-  padding: 14px 0; }
+  padding: 14px 0;
+  margin-bottom: 24px; }
   .modal__button:hover {
     opacity: 0.7; }
 
